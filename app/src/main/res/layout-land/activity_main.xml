@@ -5,25 +5,25 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:gravity="center"
+    android:orientation="horizontal"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="8dp"
         android:layout_weight="1"
-        android:layout_margin="24dp"
-        android:textSize="120sp"
-        android:text="00:00" />
+        android:text="00:00"
+        android:textSize="104sp" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_margin="8dp"
         android:layout_weight="1"
-        android:layout_margin="24dp"
-        android:textSize="120sp"
-        android:text="00:00" />
+        android:text="00:00"
+        android:textSize="104sp" />
 </LinearLayout>

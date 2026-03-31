@@ -1,6 +1,7 @@
 package com.example.timerszachowy;
 
 import android.os.Bundle;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -8,8 +9,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MainActivity extends AppCompatActivity {
+import com.google.android.material.button.MaterialButton;
 
+public class MainActivity extends AppCompatActivity {
+    Player player1, player2;
+    Button button1, button2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,5 +24,10 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        button1 = findViewById(R.id.button);
+        button2 = findViewById(R.id.button2);
+
+        player1 = new Player(true, button1);
+        player2 = new Player(false, button2);
     }
 }
