@@ -1,6 +1,7 @@
 package com.example.timerszachowy;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
@@ -29,5 +30,29 @@ public class MainActivity extends AppCompatActivity {
 
         player1 = new Player(true, button1);
         player2 = new Player(false, button2);
+
+        button1.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if(player1.isCzyAktywny()){
+                            player1.odwrocAktywnosc();
+                            player2.odwrocAktywnosc();
+                        }
+                    }
+                }
+        );
+        button2.setOnClickListener(
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        if(player2.isCzyAktywny()){
+                            player1.odwrocAktywnosc();
+                            player2.odwrocAktywnosc();
+                        }
+
+                    }
+                }
+        );
     }
 }
